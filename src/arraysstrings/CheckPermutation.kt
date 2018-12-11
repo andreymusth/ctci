@@ -9,7 +9,39 @@ import java.util.*
 class CheckPermutation(private val str1: String, private val str2: String) {
 
 
+    fun go3(): Boolean {
+
+        if (str1.length != str2.length) {
+            return false
+        }
+
+
+        val letters = IntArray(128) { 0 }
+
+        for (char in str1) {
+            ++letters[char.toInt()]
+        }
+
+        for (char in str2) {
+            --letters[char.toInt()]
+        }
+
+        for (i in letters) {
+            if (i != 0) {
+                return false
+            }
+        }
+
+        return true
+
+    }
+
     fun go2(): Boolean {
+
+        if (str1.length != str2.length) {
+            return false
+        }
+
         return sort(str1) == sort(str2)
     }
 
