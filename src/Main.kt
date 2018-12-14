@@ -1,5 +1,6 @@
 import arraysstrings.CheckPermutation
+import arraysstrings.Urlify
 
 fun main(vararg args: String) {
-    println(CheckPermutation("nasta", "atsan").go3())
+    println(Urlify("Mr John Smith         ", 13).go())
 }

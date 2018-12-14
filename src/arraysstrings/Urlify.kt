@@ -15,12 +15,29 @@ class Urlify(private val str: String, private val realLength: Int) {
             }
         }
 
-        val charArray = CharArray(realLength + numberOfSpaces * UNICODE_SPACE.length)
+        val charArray = CharArray(realLength + numberOfSpaces * UNICODE_SPACE.length - numberOfSpaces)
 
         var i = 0
-        while (i < charArray.size) {
-            
+        var j = 0
+
+        while (i < charArray.size && j < realLength) {
+            if (str[j] == space) {
+
+                for (k in 0 until UNICODE_SPACE.length) {
+                    charArray[i] = UNICODE_SPACE[k]
+                    i++
+                }
+
+                j++
+
+            } else {
+                charArray[i] = str[j]
+                ++i
+                ++j
+            }
         }
+
+        return String(charArray)
 
     }
 
