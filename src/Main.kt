@@ -1,6 +1,5 @@
-import arraysstrings.CheckPermutation
-import arraysstrings.Urlify
+import arraysstrings.PalindromePermutation
 
 fun main(vararg args: String) {
-    println(Urlify("Mr John Smith         ", 13).go())
+    println(PalindromePermutation("tactcapapa").go())
 }
