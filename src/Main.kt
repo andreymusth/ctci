@@ -1,5 +1,6 @@
 import arraysstrings.PalindromePermutation
+import arraysstrings.StringCompression
 
 fun main(vararg args: String) {
-    println(PalindromePermutation("tactcapapa").go())
+    println(StringCompression("aabcccccaaa").go1())
 }
