@@ -1,6 +1,14 @@
-import arraysstrings.PalindromePermutation
-import arraysstrings.StringCompression
+import arraysstrings.RotateMatrix
 
 fun main(vararg args: String) {
-    println(StringCompression("aabcccccaaa").go1())
+
+    val matrix = RotateMatrix(5)
+    matrix.display()
+
+    matrix.rotate()
+
+    println()
+    matrix.display()
+
+
 }
