@@ -1,0 +1,4 @@
+package datastructures
+
+class MyArrayList {
+}
